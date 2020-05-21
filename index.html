@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="dist/theme/white.css" id="theme">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
@@ -16,10 +16,226 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<!-- Init -->
+				<section>
+						<section data-background-transition="slide" data-background="images/banner_scalable_sodimm_som.jpg" id="presentable" class="bookend">
+							<p style="color: rgba(0, 0, 0, .9) ; text-align: left;">
+								<strong> 
+								How to make network entertainment system <br>
+								with Engicam SOMs <br><br>	<br><br>					
+								</strong> 
+								<small>
+									Speaker: <br>
+									Francesco Utel, PhD <br><br>
+
+									Say Hello to Engicam Support TEAM :<br><br>
+
+									support@engicam.com
+								</small>
+							</p>
+						</section>
+				</section>
+				
+				<!-- sezione Idea -->
+				<section>
+					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">
+						<h2>
+							The Idea
+						</h2>	
+					</section>
+
+					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<img src="images/system1.png">
+					</section>
+
+					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<img src="images/system2.png">
+					</section>
+
+
+					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<img src="images/system3.png">
+					</section>
+
+
+					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<img src="images/system4.png">
+					</section>
+
+
+					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<img src="images/system5.png">
+					</section>
+
+
+					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<img src="images/system6.png">
+					</section>
+
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<h2>
+							The Real Idea...
+						</h2>
+					</section>
+
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<strong>FAQ of children in to an aeroplane:	<br></strong>
+						<ul>
+							<li>Can I show what the pilot is doing ?</li>
+							<li>Can I show what I see below the airplane ?</li>
+							<li>Can I show Peppa Pig the movie</li>							
+						</ul>
+						<small>SOURCE: Engicam software team experience </small>
+					</section>
+
+
+					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<img src="images/system1_picure.png">
+					</section>
+
+
+					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						In this way the support team can continue to answer to your emails also during family trip !
+						<img src="images/email_disegno.jpg">
+					</section>
+				</section>
+
+				 
+				<!-- sezione presentazione Board -->
+				<section>
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">
+						<h2>Software Solution</h2>
+					</section>
+
+					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<img src="images/system4.png">
+					</section>
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<img src="images/Gstreamer.png"><br>	
+						<small>	
+							GStreamer is a pipeline-based multimedia framework that links together a wide variety of media processing systems to complete complex workflows. For instance, 
+							it can be used to build a system that reads files in one format, processes them, and exports them in another. 
+							GStreamer supports a wide variety of media-handling components, including simple audio playback, audio and video playback, recording, streaming and editing. 
+						</small>
+					</section>
+
+					
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<img src="images/GStreamer_example_pipeline.png"><br>	
+					</section>
+
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<small><pre><code>
+#! /bin/sh
+​
+route add -net 224.0.0.0 netmask 240.0.0.0 dev eth0
+​
+gst-launch-1.0 v4l2src device=/dev/video7 ! \
+	video/x-raw, framerate=30/1 ! videoconvert ! v4l2h264enc output-io-mode=4 ! \                      
+	rtph264pay ! udpsink host=$MULTICAST_IP3 port=$MULTICAST_PORT3 
+
+					</code></pre></small>
+					</section>
+
+
+
+					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<img src="images/system5.png">
+					</section>
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<h2>Multicast</h2>					
+						In computer networking, multicast is group communication where data transmission is addressed to a group of destination computers simultaneously. 
+					</section>
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<small><pre><code>
+#! /bin/sh
+​
+route add -net 224.0.0.0 netmask 240.0.0.0 dev eth0
+​​
+export MULTICAST_IP1="239.0.0.102"
+export MULTICAST_IP2="239.0.0.103"
+export MULTICAST_IP3="239.0.0.104"
+export MULTICAST_PORT1="10102"
+export MULTICAST_PORT2="10103"
+export MULTICAST_PORT3="10104"
+
+gst-launch-1.0 v4l2src device=/dev/video7 ! \
+	video/x-raw, framerate=30/1 ! videoconvert ! v4l2h264enc output-io-mode=4 ! \                      
+	rtph264pay ! udpsink host=$MULTICAST_IP3 port=$MULTICAST_PORT3 
+
+gst-launch-1.0 v4l2src device=/dev/video7 ! video/x-raw, framerate=30/1 ! \
+	videoconvert ! v4l2h264enc output-io-mode=4 ! rtph264pay ! \
+	udpsink host=$MULTICAST_IP3 port=$MULTICAST_PORT3 &
+
+gst-launch-1.0 filesrc location=/home/root/Lo_Hobbit_3.mp4 ! qtdemux ! queue ! \
+	h264parse config-interval=1 ! video/x-h264, stream-format=byte-stream, alignment=au !\
+	 rtph264pay ! udpsink host=$MULTICAST_IP2 port=$MULTICAST_PORT2;
+
+					</code></pre></small>
+					</section>
+
+				</section>
+
+				<!-- sezione presentazione Board -->
+				<section>
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">
+						<h2>Boards</h2>					
+					</section>	
+					
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+							<h4> i.CoremMx8m Mini</h4>	
+								<img src="images/iCoreMX8M_Mini_full.png">
+							</h4>
+					</section>
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+							<img src="images/edimm.png" style=" text-align: center;"> <br>
+							<small  style=" text-align: left;">
+								Most Engicam modules are available in SODIMM format and are compatible with each other in order to have a complete scalability. 
+								<br><br>
+								This feature makes Engicam's  modules extremely flexible and allows the customer to develop different products, with different performance
+								and cost-optimized, using the same carrier board.
+								<br><br>
+								Thanks to NXP longevity program, Engicam modules have a guaranteed long term production availability.
+								<br><br>
+								Engicam SOM are proven in hundreds of different applications under extremely hard thermal and mechanical operating conditions.
+							</small>
+						</h4>
+					</section>
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">	
+						<h4>CTouch 2.0</h4>	
+							<img src="images/ctouch2.png">
+						</h4>
+					</section>
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">	
+							<img src="images/CTouch2.0_Peripherals_wiring_map.png">
+					</section>
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">	
+						<h4>SmarCore MX8X</h4>	
+							<img src="images/smarcmx8x_full.png">
+						</h4>
+					</section>
+
+				</section>
 			</div>
 		</div>
+
+		<aside id="presentable-icon" class="revealjs">
+
+			<a title="Table of Contents" href="#/0/1">
+				<i class="fa fa-list-ul fa-2x" style='color:  rgba(0,129,195,.6)'></i>
+			</a>
+		
+   		</aside>
 
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
@@ -36,5 +252,5 @@
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
 		</script>
-	</body>
+	</body>	
 </html>
