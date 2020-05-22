@@ -45,30 +45,36 @@
 					</section>
 
 					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<h5>Network entertainment system</h5>
 						<img src="images/system1.png">
 					</section>
 
 					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<h5>2 Camera inputs</h5>
 						<img src="images/system2.png">
 					</section>
 
 
 					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<h5>Playback from local media</h5>
 						<img src="images/system3.png">
 					</section>
 
 
 					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<h5>Streamed into local network</h5>
 						<img src="images/system4.png">
 					</section>
 
 
 					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<h5>An some receives...</h5>
 						<img src="images/system5.png">
 					</section>
 
 
 					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<h5>More receives...</h5>
 						<img src="images/system6.png">
 					</section>
 
@@ -110,6 +116,7 @@
 					</section>
 
 					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<h5>Streamer system</h5>
 						<img src="images/system4.png">
 					</section>
 
@@ -144,6 +151,7 @@ gst-launch-1.0 v4l2src device=/dev/video7 ! \
 
 
 					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<h5>Receiver system</h5>
 						<img src="images/system5.png">
 					</section>
 
@@ -196,11 +204,13 @@ gst-launch-1.0 udpsrc multicast-group=239.0.0.102 port=10102 ! \
 					</code></pre></small>
 					</section>
 
-
-
 					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-						<h2>User (Children) Interface</h2>					
-						TODO
+						<h2>User Interface</h2>	
+						<ul>
+							<li>The user can be select from different video sources.</li>			
+							<li>Simple but very attractive interface.</li>
+							<li>Multilanguage.</li>
+						</ul>				
 					</section>
 
 					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">	
@@ -211,6 +221,56 @@ gst-launch-1.0 udpsrc multicast-group=239.0.0.102 port=10102 ! \
 							with little or no change in the underlying codebase while still being a native application with native capabilities and speed. 
 						</small>
 					</section>
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<h2>Licensing</h2>
+						<img src="images/qtlogo.png"><br>
+						<small>		
+							Qt for Application Development is dual-licensed under commercial and open source licenses. 
+							The commercial Qt license gives you the full rights to create and distribute software on your own terms without any open source license obligations. 
+							Qt for Application Development is also available under GPL and LGPLv3 open source licenses. 
+							Qt tools and some libraries are only available under GPL. See the comparison chart for details. 
+							For more information, please see the www.qt.io .
+						</small>
+					</section>
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<h4>Languages and Writing Systems</h4>		
+						<small>
+							In some cases internationalization is simple, for example, making a US application accessible to Australian or
+							British users may require little more than a few spelling corrections. But to make a US application usable 
+							by Japanese users, or a Korean application usable by German users,	will require that the software operate not only 
+							in different languages, but use different input techniques, character encodings and presentation conventions.
+						</small>
+					</section>
+
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<h4>Languages and Writing Systems</h4>		
+						<small>
+							Qt tries to make internationalization as painless as possible for developers. 
+							All input controls and text drawing methods in Qt offer built-in support for all supported languages. 
+							The built-in font engine is capable of correctly and attractively rendering text that contains characters 
+							from a variety of different writing systems at the same time.
+						</small>
+					</section>
+
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<h4>Multilanguage</h4>
+						<small><pre><code>
+int main(int argc, char *argv[])
+{
+	QApplication app(argc, argv);
+
+	QTranslator myappTranslator;
+	myappTranslator.load("myapp_" + QLocale::system().name());
+	app.installTranslator(&myappTranslator);
+
+	return app.exec();
+}
+						</code></pre></small>
+						</section>
 
 				</section>
 
@@ -258,6 +318,15 @@ gst-launch-1.0 udpsrc multicast-group=239.0.0.102 port=10102 ! \
 					</section>
 
 					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">	
+						<h4>Connections</h4>						
+						<p style="color: rgba(0, 0, 0, .9) ; text-align: left;">For this demos we have used: </p>
+						<ul>
+							<li>Network interface for streaming.</li>
+							<li>Touch Interaction.</li>			
+						</ul>
+					</section>
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">	
 						<h4>SmarCore MX8X</h4>	
 							<img src="images/smarcmx8x_full.png">
 					</section>
@@ -267,15 +336,14 @@ gst-launch-1.0 udpsrc multicast-group=239.0.0.102 port=10102 ! \
 					</section>
 
 					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">	
-						<h4>Connection</h4>	
-						
+						<h4>Connections</h4>						
 						<p style="color: rgba(0, 0, 0, .9) ; text-align: left;">For this demos we have used: </p>
 						<ul>
 							<li>A MIPI Camera as primary video input and a usb camera as secondary video input.</li>
-							<li>A SDCARD for local video storage.</li>						
+							<li>A SDCARD for local video storage.</li>
+							<li>Network interface for streaming.</li>			
 						</ul>
 					</section>
-
 				</section>
 
 
