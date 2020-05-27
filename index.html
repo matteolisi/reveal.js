@@ -21,8 +21,8 @@
 						<section data-background-transition="slide" data-background="images/banner_scalable_sodimm_som.jpg" id="presentable" class="bookend">
 							<p style="color: rgba(0, 0, 0, .9) ; text-align: left;">
 								<strong> 
-								How to make network entertainment system <br>
-								with Engicam SOMs <br><br>	<br><br>					
+								Introduction to Engicam BSP <br>
+								<br><br>	<br><br>					
 								</strong> 
 								<small>
 									Speaker: <br>
@@ -34,262 +34,31 @@
 								</small>
 							</p>
 						</section>
+
+						<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+							<p style="color: rgba(0, 0, 0, .9) ; text-align: left;">
+								<strong>
+									Agenda <br><br><br>					
+								</strong>	 
+									<ul>
+										<li>HW presentation.</li>
+										<li>Engicam BSP introduction.</li>
+										<li>Yocto Basics.</li>
+										<li>Flash and run Yocto Image.</li>	
+									</ul>
+							</p>
+						</section>
 				</section>
 				
-				<!-- sezione Idea -->
-				<section>
-					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">
-						<h2>
-							The Idea
-						</h2>	
-					</section>
-
-					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-						<h5>Network entertainment system</h5>
-						<img src="images/system1.png">
-					</section>
-
-					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-						<h5>2 Camera inputs</h5>
-						<img src="images/system2.png">
-					</section>
-
-
-					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-						<h5>Playback from local media</h5>
-						<img src="images/system3.png">
-					</section>
-
-
-					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-						<h5>Streamed into local network</h5>
-						<img src="images/system4.png">
-					</section>
-
-
-					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-						<h5>An some receives...</h5>
-						<img src="images/system5.png">
-					</section>
-
-
-					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-						<h5>More receives...</h5>
-						<img src="images/system6.png">
-					</section>
-
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-						<h2>
-							The Real Idea...
-						</h2>
-					</section>
-
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-						<strong>FAQ of children on an aeroplane:	<br></strong>
-						<ul>
-							<li>Can I see what the pilot is doing?</li>
-							<li>Can I see the land below?</li>
-							<li>Can I watch Peppa Pig movie?</li>							
-						</ul>
-						<small>SOURCE: Engicam software team experience </small>
-					</section>
-
-
-					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-						<img src="images/system1_picure.png">
-					</section>
-
-
-					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-						In this way the support team can continue to answer to your emails also during family trip !
-						<img src="images/email_disegno.jpg">
-					</section>
-				</section>
-
-				 
-				<!-- sezione presentazione software solution -->
-				<section>
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">
-						<h2>Software Solution</h2>
-					</section>
-					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-						<h5>Streamer system</h5>
-						<img src="images/system4.png">
-					</section>
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-						<img src="images/Gstreamer.png"><br>	
-						<small>	
-							</p>GStreamer is a pipeline-based <b>multimedia framework</b> that links together a wide variety of media processing systems to complete complex workflows.</p>
-							Support for wide variety of media-handling components, including simple audio playback, audio and video playback, recording, streaming and editing. 
-						</small>
-					</section>
-
-					
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-						<img src="images/GStreamer_example_pipeline.png"><br>	
-					</section>
-
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-						<small><pre><code>
-#! /bin/sh
-​
-route add -net 224.0.0.0 netmask 240.0.0.0 dev eth0
-​
-gst-launch-1.0 v4l2src device=/dev/video7 ! \
-	video/x-raw, framerate=30/1 ! videoconvert ! v4l2h264enc output-io-mode=4 ! \                      
-	rtph264pay ! udpsink host=$MULTICAST_IP3 port=$MULTICAST_PORT3 
-
-					</code></pre></small>
-					</section>
-
-
-
-					<section data-background-transition="zoom" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-						<h5>Receiver system</h5>
-						<img src="images/system5.png">
-					</section>
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-						<h2>Multicast</h2>					
-						In computer networking, multicast is group communication where data transmission is addressed to a group of destination computers simultaneously. 
-					</section>
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-						<h4>Sender</h4>
-						<small><pre><code>
-#! /bin/sh
-​
-route add -net 224.0.0.0 netmask 240.0.0.0 dev eth0
-​​
-export MULTICAST_IP1="239.0.0.102"
-export MULTICAST_IP2="239.0.0.103"
-export MULTICAST_IP3="239.0.0.104"
-export MULTICAST_PORT1="10102"
-export MULTICAST_PORT2="10103"
-export MULTICAST_PORT3="10104"
-
-gst-launch-1.0 v4l2src device=/dev/video7 ! \
-	video/x-raw, framerate=30/1 ! videoconvert ! v4l2h264enc output-io-mode=4 ! \                      
-	rtph264pay ! udpsink host=$MULTICAST_IP3 port=$MULTICAST_PORT3 
-
-gst-launch-1.0 v4l2src device=/dev/video7 ! video/x-raw, framerate=30/1 ! \
-	videoconvert ! v4l2h264enc output-io-mode=4 ! rtph264pay ! \
-	udpsink host=$MULTICAST_IP3 port=$MULTICAST_PORT3 &
-
-gst-launch-1.0 filesrc location=/home/root/Lo_Hobbit_3.mp4 ! qtdemux ! queue ! \
-	h264parse config-interval=1 ! video/x-h264, stream-format=byte-stream, alignment=au !\
-	 rtph264pay ! udpsink host=$MULTICAST_IP2 port=$MULTICAST_PORT2;
-
-					</code></pre></small>
-					</section>
-
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-						<h4>Receiver</h4>
-						<small><pre><code>
-#! /bin/sh
-​
-route add -net 224.0.0.0 netmask 240.0.0.0 dev eth0
-​​
-gst-launch-1.0 udpsrc multicast-group=239.0.0.102 port=10102 ! \
-	application/x-rtp,encoding-name=H264,payload=97 ! \
-	rtph264depay ! h264parse ! imxvpudec ! imxg2dvideosink sync=false                          
-
-					</code></pre></small>
-					</section>
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-						<h2>User Interface</h2>	
-						<ul>
-							<li>Possibility to select different video sources.</li>			
-							<li>Simple but very attractive interface.</li>
-							<li>Multilanguage.</li>
-						</ul>				
-					</section>
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">	
-						<img src="images/qtlogo.png"><br>
-						<small>		
-							<p>Qt is a <b>widget toolkit</b> for creating graphical user interfaces and applications.<br><br></p>
-								<p style=" text-align: left;"><b>Cross-platform</b> framework:</p>
-							<ul>
-								<li>Apps runs on different software and hardware platforms (Linux, Windows, macOS, Android or embedded systems)</li>
-								<li>No change in the underlying codebase while still being a native application with native capabilities and speed.</li>
-							</ul>   
-						</small>
-					</section>
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-						<h2>Licensing</h2>
-						<img src="images/qtlogo.png"><br>
-						<small>		
-							</p>Dual-licensed:</p>
-								<ul>
-								<li><b>Commercial</b> - Create and distribute under your own terms (no open source license obligations).</li>
-								<li><b>Open source</b> - GPL and LGPLv3 licenses.</li>
-								</ul>  
-							</p>Qt tools and some libraries are only available under GPL. See the comparison chart for details. 
-							For more information, please see the www.qt.io .</p>
-						</small>
-					</section>
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-						<h4>Languages and Writing Systems</h4>		
-						<small>
-							</p>Make application usable by everyone.</p>
-							</p>Translation is <b>not only spelling</b>:</p>
-							</p>Software must use different <b>input techniques</b>, <b>character encodings</b> and <b>presentation conventions</b>.
-						</small>
-					</section>
-
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-						<h4>Languages and Writing Systems</h4>		
-						<small>
-							</p>Internationalization made easy:</p> 
-							</p>All input controls and text drawing methods in Qt offer <b>built-in support for all supported languages</b>.</p> 
-							</p>The built-in font engine is capable of correctly and attractively rendering text that contains characters 
-							from a variety of different writing systems at the same time.</p>
-						</small>
-					</section>
-
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-						<h4>Multilanguage</h4>
-						<small><pre><code>
-int main(int argc, char *argv[])
-{
-	QApplication app(argc, argv);
-
-	QTranslator myappTranslator;
-	myappTranslator.load("myapp_" + QLocale::system().name());
-	app.installTranslator(&myappTranslator);
-
-	return app.exec();
-}
-						</code></pre></small>
-						</section>
-
-				</section>
 
 				<!-- sezione presentazione Board -->
 				<section>
 					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">
-						<h2>Hardware Solutions </h2>					
-					</section>	
-					
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-							<img src="images/system2_picure.png">
-						</h4>
+						<h2>The Hardware </h2>					
 					</section>
 
-
 					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-							<h4> i.CoremMx8m Mini</h4>	
+							<h4> i.CoreMx8m Mini</h4>	
 								<img src="images/iCoreMX8M_Mini_full.png">
 							</h4>
 					</section>
@@ -310,41 +79,13 @@ int main(int argc, char *argv[])
 					</section>
 
 					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">	
-						<h4>CTouch 2.0</h4>	
-							<img src="images/ctouch2.png">
+						<h4>Edimm starterkit 2.0</h4>	
+							<img src="images/starterkit2.0.png">
 						</h4>
 					</section>
 
 					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">	
-							<img src="images/CTouch2.0_Peripherals_wiring_map.png">
-					</section>
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">	
-						<h4>Connections on CTouch2.0</h4>						
-						<p style="color: rgba(0, 0, 0, .9) ; text-align: left;">For this demos we have used: </p>
-						<ul>
-							<li>Network interface for streaming.</li>
-							<li>Touch Interaction.</li>			
-						</ul>
-					</section>
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">	
-						<h4>SmarCore MX8X</h4>	
-							<img src="images/smarcmx8x_full.png">
-					</section>
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
-							<img src="images/SMARCSTARTERKIT.png">
-					</section>
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">	
-						<h4>Connections on Multimedia 4K Board</h4>						
-						<p style="color: rgba(0, 0, 0, .9) ; text-align: left;">For this demos we have used: </p>
-						<ul>
-							<li>MIPI Camera as primary video input - Usb camera as secondary video input.</li>
-							<li>SDCARD for local video storage.</li>
-							<li>Network interface for streaming.</li>			
-						</ul>
+							<img src="images/wiring_EDIMM2.0.png">
 					</section>
 				</section>
 
@@ -391,6 +132,63 @@ int main(int argc, char *argv[])
 					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
 							<img src="images/Yocto-Diagram.png">
 					</section>
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
+						<h4>Bitbake</h4>
+						<small>
+							BitBake is a make-like build tool with the special focus of distributions and packages for embedded Linux cross compilation.
+							It is inspired by Portage,which is the package management system used by the Gentoo Linux distribution. 
+							BitBake is co-maintained by the Yocto Project and the OpenEmbedded project.
+							BitBake recipes specify how a particular package is built.
+						</small>
+					</section>
+
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
+						<h4>Bitbake Recipes</h4>
+						<small>
+							Recipes consist of the source URL (http, https, ftp, cvs, svn, git, local file system) of the package, dependencies and compile or install options. 
+							During the build process, recipes are used to track dependencies, performing native or cross-compilation of the package and package 
+							it so that it is suitable for installation on the local or a target device. It is also possible to create complete images consisting 
+							of a root file system and kernel. 
+							As a first step in a cross-build setup, the framework will attempt to create a cross-compiler toolchain suited for the target platform.
+						</small>
+					</section>
+
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
+						<h4>Bitbake Recipes</h4>
+						<small><pre><code>
+SUMMARY = "Tools for emmc programmig"
+DESCRIPTION = "This package provides tools for emmc programmig"
+LICENSE = "GPLv2"
+LIC_FILES_CHKSUM = "file://${WORKDIR}/copyright;md5=3dd6192d306f582dee7687da3d8748ab"
+
+inherit allarch
+
+SRC_URI = "file://emmc_tools.sh"
+			
+RDEPENDS_${PN} += "bash dosfstools e2fsprogs pv"
+
+do_install () {
+	install -d ${D}${bindir}
+	install -m 0755 ${WORKDIR}/emmc_tools.sh ${D}${bindir}/emmc_tools.sh
+	ln -sf emmc_tools.sh ${D}${bindir}/emmc_fs.sh
+	ln -sf emmc_tools.sh ${D}${bindir}/emmc_fs_ker_dtb.sh
+	ln -sf emmc_tools.sh ${D}${bindir}/emmc_fs_ker.sh
+	ln -sf emmc_tools.sh ${D}${bindir}/emmc_ker.sh
+	ln -sf emmc_tools.sh ${D}${bindir}/emmc_ker_dtb.sh
+	ln -sf emmc_tools.sh ${D}${bindir}/emmc_dtb.sh
+	ln -sf emmc_tools.sh ${D}${bindir}/emmc_boot.sh
+	ln -sf emmc_tools.sh ${D}${bindir}/emmc_sdcard.sh
+}							
+						</pre></code></small>
+					</section>
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
+						<img src="images/bitbake-steps.jpg">
+					</section>
+
 
 					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
 						<h4>Engicam Repos</h4>
