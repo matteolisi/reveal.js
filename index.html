@@ -133,6 +133,18 @@
 							<img src="images/Yocto-Diagram.png">
 					</section>
 
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
+						<h4>Poky</h4>
+						The reference build system<br><br>
+						
+						<ul>
+							<li>Contains tools and other software package or layer to run the build.</li>
+							<li>Offers a starting point to create your own build.</li>
+							<li>Easily expandable with new layer.</li>
+						</ul>
+					</section>
+
 					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
 						<h4>Bitbake</h4>
 						<small>
@@ -188,6 +200,153 @@ do_install () {
 					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
 						<img src="images/bitbake-steps.jpg">
 					</section>
+
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
+						<img src="images/layers.jpg">
+					</section>
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
+						<h4>engicam meta-layer</h4>
+						<small><pre><code>
+├── conf
+│   ├── layer.conf
+│   └── machine
+│       ├── icoremx6dl.conf
+│       ├── icore-mx6.inc
+│       ├── icore-mx8.inc
+│       ├── icoremx8m.conf
+│       ├── icoremx8mm.conf
+│       ├── icoremx8xd.conf
+│       ├── icoremx8xq.conf
+│       ├── smarcoremx8xq.conf
+│       └── ultragea-mx8qm.conf
+├── doc
+│   ├── kernel.md
+│   ├── programming.md
+│   ├── README.md
+│   ├── tests
+│   │   └── iCoreMx8mini
+│   │       └── CTouch2.md
+│   └── uboot.md
+├── recipes-bsp
+│   ├── imx-atf
+│   │   ├── imx-atf
+│   │   │   └── 0001-mx8m-mini-remove-uart4-from-m4.patch
+│   │   └── imx-atf_2.0.bbappend
+│   ├── imx-mkimage
+│   │   ├── imx-boot
+│   │   │   ├── 0001-fix-dtb-for-icoremx8mm.patch
+│   │   │   └── 0001-fix-dtb-for-icoremx8m.patch
+│   │   └── imx-boot_0.2.bbappend
+│   ├── imx-sc-firmware
+│   │   ├── imx-sc-firmware
+│   │   │   ├── mx8qx-icore-scfw-tcm.bin
+│   │   │   └── mx8qx-smarcore-scfw-tcm.bin
+│   │   └── imx-sc-firmware_1.2.bbappend
+│   └── u-boot
+│       ├── files
+│       │   ├── 0001-added-support-for-2GB-RAM-SAMSUNG-and-MICRON.patch
+│       │   └── 0001-removed-CONFIG_LDO_BYPASS_CHECK.patch
+│       └── u-boot-engicam.bb
+├── recipes-connectivity
+│   ├── brcm-patchram-plus
+│   │   ├── brcm-patchram-plus
+│   │   │   └── brcm_patchram_plus.c
+│   │   └── brcm-patchram-plus.bb
+│   └── lwb-bcm4343w-fw
+│       ├── lwb-bcm4343w-fw
+│       │   └── brcm4343w
+│       │       ├── 4343w-07_25_2016.hcd
+│       │       ├── BCM4343A1_001.002.009.0038.0000_Generic_UART_37_4MHz_wlbga_ref_OTP.hcd
+│       │       ├── bcmdhd_4343w_etsi-11_15_2016.cal
+│       │       ├── fw_bcmdhd_4343w-11_15_2016.bin
+│       │       └── fw_bcmdhd_mfgtest_4343w-11_15_2016.bin
+│       └── lwb-bcm4343w-fw.bb
+├── recipes-core
+│   ├── busybox
+│   │   ├── busybox
+│   │   │   └── fragment.cfg
+│   │   └── busybox_%.bbappend
+│   ├── cantest
+│   │   ├── cantest
+│   │   │   ├── can.h
+│   │   │   ├── cansend.c
+│   │   │   ├── copyright
+│   │   │   ├── lib.c
+│   │   │   ├── lib.h
+│   │   │   ├── Makefile
+│   │   │   └── raw.h
+│   │   └── cantest.bb
+│   ├── serialtools
+│   │   ├── serialtools
+│   │   │   ├── copyright
+│   │   │   ├── Makefile
+│   │   │   ├── serial_lib.c
+│   │   │   ├── serial_lib.h
+│   │   │   ├── test_gps.c
+│   │   │   ├── test_serial2.c
+│   │   │   └── test_serial.c
+│   │   └── serialtools.bb
+│   ├── test-sound
+│   │   ├── test-sound
+│   │   │   ├── megamix_lr.wav
+│   │   │   ├── playleftright.sh
+│   │   │   ├── playring.sh
+│   │   │   └── ring.wav
+│   │   └── test-sound.bb
+│   └── webgldemo
+│       ├── webgldemo
+│       │   └── webgldemo.service
+│       └── webgldemo.bb
+├── recipes-images
+│   └── images
+│       ├── engicam-demo-qt.bb
+│       ├── engicam-ml-image.bb
+│       ├── engicam-streamer.bb
+│       └── engicam-test-hw.bb
+└── recipes-kernel
+	└── linux
+		├── linux-engicam
+		│   └── mx8mm
+		│       ├── 0001-fix-reboot.patch
+		│       └── 0002-fix-sdhc1-pads.patch
+		└── linux-engicam_4.14.98.bb
+
+37 directories, 66 files
+										
+					</pre></code></small>
+					</section>
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
+						<h4>Device Tree</h4>
+						Structure of simple Tree of nodes and properties.<br><br>
+						
+						<ul>
+							<li>Define pinout and layout of connections</li>
+							<li>Describe the configuration of peripherals and active components</li>
+							<li>Describes interrupt controllers and IRQs</li>
+						</ul>
+					</section>
+
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
+						<h4>Device Tree</h4>
+						<small><pre><code>			
+&i2c1 {
+	max11801@48 {
+		compatible = "maxim,max11801";               
+		reg = <0x48>;
+		interrupt-parent = <&gpio3>;
+		interrupts = <31 2>;
+		work-mode = <0>;/*DCM mode*/
+		pinctrl-names = "default";
+		pinctrl-0 = <&pinctrl_max11801>;
+	};
+};						
+						</pre></code></small>
+					</section>
+
 
 
 					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		

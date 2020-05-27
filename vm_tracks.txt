@@ -1,0 +1,39 @@
+
+
+### introduzione alla macchina virtuale
+### sorgenti.
+
+cd yocto
+cd sumo
+cd sources
+cd meta-engicam-mx8
+
+### due parole sul fatto che prima di iniziare un nuovo progetto è consigliato allineare i sorgenti del meta-engicam all'ultima versione. 
+
+git pull (verifica dell'ultima versione dei sorgenti)
+
+
+
+### Check delle macchine disponibili:
+ls conf/machine
+
+### da evidenziare le machine utilizzate per il sistema:
+
+icoremx8mm.conf
+
+### Elencare le immagini disponibili:
+
+ls recipes-images/images
+
+### immagine di per eseguire test su schede
+engicam-test-hw.bb
+
+### immagine di svilippo applicazioi qt (sono presenti i moduli più diffusi) impiegata spesso con i moduli openframe.
+engicam-demo-qt.bb
+
+bitbake engicam-demo-qt
+
+### attendere la fine del building e far vedere come si flasha l'immagine con dd
+
+
+
