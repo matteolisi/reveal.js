@@ -119,13 +119,26 @@
 							</tr>					
 					</section>
 
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<img src="images/yocto_project_standard.png">
+						<small>
+							<p>The Yocto Project aim: improving the software <b>development</b> process for <b>embedded Linux distributions</b>.</p> 
+							<p>CUSTOMIZATION:</p> 
+							<ul>
+							<li>General Linux distribution: customization with a package managment system.
+							<li>Yocto: &nbsp;&nbsp;    Sources file customization &nbsp;&nbsp; -->&nbsp;&nbsp;    <b>Build</b>  &nbsp;&nbsp;--> &nbsp;&nbsp; Customized distro.
+							</ul>	
+						</small>
+					</section>
 
 					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
 						<img src="images/yocto_project_standard.png">
 						<small>
-							The Yocto Project's focus is on improving the software development process for embedded Linux distributions. The Yocto Project provides interoperable tools, 
-							metadata, and processes that enable the rapid, repeatable development of Linux-based embedded systems in which every aspect of the development process can be customized.
-							The project offers different sized targets from "tiny" to fully featured images which are configurable and customisable by the end user.
+							<ul>
+							<li>Interoperable tools, 
+							metadata, and processes that enable the rapid, <b>repeatable development</b> of Linux-based embedded systems in which every aspect of the development process can be customized.
+							<li>The project offers different sized targets <b>from "tiny" to fully featured</b> images which are configurable and customisable by the end user.
+							</ul>						
 						</small>
 					</section>
 
@@ -148,22 +161,28 @@
 					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
 						<h4>Bitbake</h4>
 						<small>
-							BitBake is a make-like build tool with the special focus of distributions and packages for embedded Linux cross compilation.
-							It is inspired by Portage,which is the package management system used by the Gentoo Linux distribution. 
-							BitBake is co-maintained by the Yocto Project and the OpenEmbedded project.
-							BitBake recipes specify how a particular package is built.
+							<p>It is a <b>Make-like</b> build tool for packages <b>cross compilation</b>.</p>
+							<p>Cross-compilation: compiling code for one computer system (often known as the target) on a different system, called the host.</p>
 						</small>
 					</section>
 
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
+						<h4>Bitbake</h4>
+						<small>
+							<p>It is inspired by Portage,which is the package management system used by the Gentoo Linux distribution.</p> 
+							<p>BitBake is co-maintained by the Yocto Project and the OpenEmbedded project.</p>
+						</small>
+					</section>
 
 					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
 						<h4>Bitbake Recipes</h4>
 						<small>
-							Recipes consist of the source URL (http, https, ftp, cvs, svn, git, local file system) of the package, dependencies and compile or install options. 
-							During the build process, recipes are used to track dependencies, performing native or cross-compilation of the package and package 
-							it so that it is suitable for installation on the local or a target device. It is also possible to create complete images consisting 
-							of a root file system and kernel. 
-							As a first step in a cross-build setup, the framework will attempt to create a cross-compiler toolchain suited for the target platform.
+							<p>BitBake recipes specify <b>how a particular package is built.</b></p>
+							<p>Recipes consist of the source URL (http, https, ftp, cvs, svn, git, local file system) of the package, dependencies and compile or install options.</p>
+							<p>As a first step in a cross-build setup, the framework will attempt to create a <b>cross-compiler toolchain</b> suited for the target platform.</p>
+							<p>During the build process, recipes are used to track dependencies, performing native or cross-compilation of the package and package the output to make it suitable for installation on the local or a target device. It is also possible to create complete images consisting 
+							of a root file system and kernel.</p> 
+
 						</small>
 					</section>
 
