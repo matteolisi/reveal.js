@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/white.css" id="theme">
+		<link rel="stylesheet" href="dist/theme/matteo.css" id="theme">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
@@ -18,35 +18,18 @@
 			<div class="slides">
 				<!-- Init -->
 				<section>
-						<section data-background-transition="slide" data-background="images/banner_scalable_sodimm_som.jpg" id="presentable" class="bookend">
-							<p style="color: rgba(0, 0, 0, .9) ; text-align: left;">
-								<strong> 
+						<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">
+								<h2><strong> 
 								Introduction to Engicam BSP <br>
-								<br><br>	<br><br>					
-								</strong> 
+								</strong></h2>								
 								<small>
-									Speaker: <br>
-									Francesco Utel, PhD <br><br>
-
-									Say Hello to Engicam Support TEAM :<br><br>
-
-									support@engicam.com
+								<p style="color: rgba(0, 0, 0, .9);">								
+									Speaker: <br><br>
+									<strong>Matteo Lisi</strong> <br><br>
+									Engicam software team member<br><br>
+									<a href="matteo.lisi@engicam.com">matteo.lisi@engicam.com</a>
 								</small>
-							</p>
-						</section>
-
-						<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-							<p style="color: rgba(0, 0, 0, .9) ; text-align: left;">
-								<strong>
-									Agenda <br><br><br>					
-								</strong>	 
-									<ul>
-										<li>HW presentation.</li>
-										<li>Engicam BSP introduction.</li>
-										<li>Yocto Basics.</li>
-										<li>Flash and run Yocto Image.</li>	
-									</ul>
-							</p>
+								</p>
 						</section>
 				</section>
 				
@@ -57,13 +40,13 @@
 						<h2>The Hardware </h2>					
 					</section>
 
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
-							<h4> i.CoreMx8m Mini</h4>	
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">
+							<h4>i.Core MX8M Mini</h4>	
 								<img src="images/iCoreMX8M_Mini_full.png">
 							</h4>
 					</section>
 
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">
 							<img src="images/edimm.png" style=" text-align: center;"> <br>
 							<small  style=" text-align: left;">
 								Most Engicam modules are available in SODIMM format and are compatible with each other in order to have a complete scalability. 
@@ -79,13 +62,13 @@
 					</section>
 
 					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">	
-						<h4>Edimm starterkit 2.0</h4>	
-							<img src="images/starterkit2.0.png">
+						<h4>EDIMM Starterkit 2.0</h4>	
+							<img src="images/starterkit2.0.png" width="70%" height="70%">
 						</h4>
 					</section>
 
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">	
-							<img src="images/wiring_EDIMM2.0.png">
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">	
+							<img src="images/wiring_EDIMM2.0.png"  width="70%" height="70%">
 					</section>
 				</section>
 
@@ -96,7 +79,7 @@
 						<h2>Engicam BSP</h2>	
 					</section>
 
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">	
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">	
 						<h4>Engicam BSP</h4>	
 						<ul>
 							<li>It is a virtual machine image ready to use.</li>
@@ -106,7 +89,7 @@
 						</ul>
 					</section>
 
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">	
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">	
 						<h4>VM Image</h4>	
 							<small>
 								Engicam BSP is a virtual machine image in VMWare format , so if you use vmplayer only 1 click needed. 
@@ -119,77 +102,30 @@
 							</tr>					
 					</section>
 
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">
 						<img src="images/yocto_project_standard.png">
 						<small>
-							<p>The Yocto Project aim: improving the software <b>development</b> process for <b>embedded Linux distributions</b>.</p> 
-							<p>CUSTOMIZATION:</p> 
-							<ul>
-							<li>General Linux distribution: customization with a package managment system.
-							<li>Yocto: &nbsp;&nbsp;    Sources file customization &nbsp;&nbsp; -->&nbsp;&nbsp;    <b>Build</b>  &nbsp;&nbsp;--> &nbsp;&nbsp; Customized distro.
-							</ul>	
+							<p>The <strong>Yocto Project</strong> is a Linux Foundation collaborative open source project whose goal is to produce 
+								tools and processes that enable the creation of Linux distributions 
+								for embedded and IoT software that are independent of the underlying architecture of 
+								the embedded hardware.</p>
 						</small>
 					</section>
 
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">
 						<img src="images/yocto_project_standard.png">
 						<small>
-							<ul>
-							<li>Interoperable tools, 
-							metadata, and processes that enable the rapid, <b>repeatable development</b> of Linux-based embedded systems in which every aspect of the development process can be customized.
-							<li>The project offers different sized targets <b>from "tiny" to fully featured</b> images which are configurable and customisable by the end user.
-							</ul>						
+							<p><strong>Recipe</strong>: A set of instructions for building packages. 
+							A recipe describes where you get source code and which patches to apply. 
+							Recipes describe dependencies for libraries or for other recipes, and they also contain 
+							configuration and compilation options. Recipes contain the logical unit of execution, 
+							the software to build, the images to build, and use the .bb file extension.</p>
 						</small>
 					</section>
 
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
-							<img src="images/Yocto-Diagram.png">
-					</section>
-
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
-						<h4>Poky</h4>
-						The reference build system<br><br>
-						
-						<ul>
-							<li>Contains tools and other software package or layer to run the build.</li>
-							<li>Offers a starting point to create your own build.</li>
-							<li>Easily expandable with new layer.</li>
-						</ul>
-					</section>
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
-						<h4>Bitbake</h4>
-						<small>
-							<p>It is a <b>Make-like</b> build tool for packages <b>cross compilation</b>.</p>
-							<p>Cross-compilation: compiling code for one computer system (often known as the target) on a different system, called the host.</p>
-						</small>
-					</section>
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
-						<h4>Bitbake</h4>
-						<small>
-							<p>It is inspired by Portage,which is the package management system used by the Gentoo Linux distribution.</p> 
-							<p>BitBake is co-maintained by the Yocto Project and the OpenEmbedded project.</p>
-						</small>
-					</section>
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">          
 						<h4>Bitbake Recipes</h4>
-						<small>
-							<p>BitBake recipes specify <b>how a particular package is built.</b></p>
-							<p>Recipes consist of the source URL (http, https, ftp, cvs, svn, git, local file system) of the package, dependencies and compile or install options.</p>
-							<p>As a first step in a cross-build setup, the framework will attempt to create a <b>cross-compiler toolchain</b> suited for the target platform.</p>
-							<p>During the build process, recipes are used to track dependencies, performing native or cross-compilation of the package and package the output to make it suitable for installation on the local or a target device. It is also possible to create complete images consisting 
-							of a root file system and kernel.</p> 
-
-						</small>
-					</section>
-
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
-						<h4>Bitbake Recipes</h4>
-						<small><pre><code>
+							<small><pre><code>
 SUMMARY = "Tools for emmc programmig"
 DESCRIPTION = "This package provides tools for emmc programmig"
 LICENSE = "GPLv2"
@@ -198,36 +134,40 @@ LIC_FILES_CHKSUM = "file://${WORKDIR}/copyright;md5=3dd6192d306f582dee7687da3d87
 inherit allarch
 
 SRC_URI = "file://emmc_tools.sh"
-			
+						
 RDEPENDS_${PN} += "bash dosfstools e2fsprogs pv"
 
 do_install () {
-	install -d ${D}${bindir}
-	install -m 0755 ${WORKDIR}/emmc_tools.sh ${D}${bindir}/emmc_tools.sh
-	ln -sf emmc_tools.sh ${D}${bindir}/emmc_fs.sh
-	ln -sf emmc_tools.sh ${D}${bindir}/emmc_fs_ker_dtb.sh
-	ln -sf emmc_tools.sh ${D}${bindir}/emmc_fs_ker.sh
-	ln -sf emmc_tools.sh ${D}${bindir}/emmc_ker.sh
-	ln -sf emmc_tools.sh ${D}${bindir}/emmc_ker_dtb.sh
-	ln -sf emmc_tools.sh ${D}${bindir}/emmc_dtb.sh
-	ln -sf emmc_tools.sh ${D}${bindir}/emmc_boot.sh
-	ln -sf emmc_tools.sh ${D}${bindir}/emmc_sdcard.sh
-}							
-						</pre></code></small>
+		install -d ${D}${bindir}
+		install -m 0755 ${WORKDIR}/emmc_tools.sh ${D}${bindir}/emmc_tools.sh                           
+		ln -sf emmc_tools.sh ${D}${bindir}/emmc_fs.sh
+		ln -sf emmc_tools.sh ${D}${bindir}/emmc_fs_ker_dtb.sh
+		ln -sf emmc_tools.sh ${D}${bindir}/emmc_fs_ker.sh
+		ln -sf emmc_tools.sh ${D}${bindir}/emmc_ker.sh
+		ln -sf emmc_tools.sh ${D}${bindir}/emmc_ker_dtb.sh
+		ln -sf emmc_tools.sh ${D}${bindir}/emmc_dtb.sh
+		ln -sf emmc_tools.sh ${D}${bindir}/emmc_boot.sh
+		ln -sf emmc_tools.sh ${D}${bindir}/emmc_sdcard.sh
+}                                                      
+							</pre></code></small>
+						</section>					
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">
+						<img src="images/yocto_project_standard.png">
+						<small>
+							<ul>
+								<li><strong>Configuration File</strong> contains user-defined variables that affect every build.</li>
+								<li><strong>Machine configuration</strong> files which are located throughout the Source Directory, 
+								define variables for specific hardware and are only used when building for that target.</li>
+						</small>
 					</section>
 
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
-						<img src="images/bitbake-steps.jpg">
-					</section>
-
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">          
 						<img src="images/layers.jpg">
 					</section>
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
-						<h4>engicam meta-layer</h4>
-						<small><pre><code>
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">          
+                                               <h4>Engicam meta-layer</h4>
+                                               <small><pre><code>
 ├── conf
 │   ├── layer.conf
 │   └── machine
@@ -290,6 +230,9 @@ do_install () {
 │   ├── cantest
 │   │   ├── cantest
 │   │   │   ├── can.h
+│   ├── cantest
+│   │   ├── cantest
+│   │   │   ├── can.h
 │   │   │   ├── cansend.c
 │   │   │   ├── copyright
 │   │   │   ├── lib.c
@@ -325,61 +268,31 @@ do_install () {
 │       ├── engicam-streamer.bb
 │       └── engicam-test-hw.bb
 └── recipes-kernel
-	└── linux
-		├── linux-engicam
-		│   └── mx8mm
-		│       ├── 0001-fix-reboot.patch
-		│       └── 0002-fix-sdhc1-pads.patch
-		└── linux-engicam_4.14.98.bb
+       └── linux
+               ├── linux-engicam
+               │   └── mx8mm
+               │       ├── 0001-fix-reboot.patch
+               │       └── 0002-fix-sdhc1-pads.patch
+               └── linux-engicam_4.14.98.bb
 
 37 directories, 66 files
-										
-					</pre></code></small>
-					</section>
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
-						<h4>Device Tree</h4>
-						Structure of simple Tree of nodes and properties.<br><br>
+                                                                               
+                                       </pre></code></small>
+                                       </section>
 						
-						<ul>
-							<li>Define pinout and layout of connections</li>
-							<li>Describe the configuration of peripherals and active components</li>
-							<li>Describes interrupt controllers and IRQs</li>
-						</ul>
-					</section>
 
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
-						<h4>Device Tree</h4>
-						<small><pre><code>			
-&i2c1 {
-	max11801@48 {
-		compatible = "maxim,max11801";               
-		reg = <0x48>;
-		interrupt-parent = <&gpio3>;
-		interrupts = <31 2>;
-		work-mode = <0>;/*DCM mode*/
-		pinctrl-names = "default";
-		pinctrl-0 = <&pinctrl_max11801>;
-	};
-};						
-						</pre></code></small>
-					</section>
-
-
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">		
 						<h4>Engicam Repos</h4>
 						All Engicam  BSP sources are open and available on github.<br><br>
 						https://github.com/engicam-stable
 					</section>
 
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">		
 						If you want to use your own linux machine you can install yocto sources and the corrisponding meta-layer branch. <br>
 						<img src="images/branch.png">
 					</section>
 
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">		
 						But if you are in trouble remeber:<br><br><br>
 						<strong>support@engicam.com</strong>
 					</section>
