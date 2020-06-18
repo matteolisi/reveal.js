@@ -1,0 +1,140 @@
+
+Buongiorno a tutti
+
+Io sono Matteo lisi e faccio parte del team software di Engicam.
+
+Lo scopo di questo video è quello di mostrarvi quali sonmo gli strumenti a disposizione dello sviluppatore una volta deciso
+di iniziare un progetto con i nostri prodotti.
+
+Normalmente viene prima scelta un SOM in base alle sue caratteristiche hardware , ed in base all'applicazione che si ha in mente si sceglie
+una board di riferimento . 
+
+Assieme al materiale ricevete un link per scaricare il nostro BSP.
+
+Vediamo in dettaglio di cosa si tratta.
+
+
+###
+
+Supponiamo di aver la necessità di utilizzzare il SOM il i.Core MX8M Mini .
+
+Questo Som è basato sul SOC mx8m mini di NXP può essere equipaggiato con tagli di Memoria e eeMC differenti in base alla richieste.
+è un quad core Cortex-A53 con un single core Coretex-M4 per le applicazioni realtime
+
+Sul SOM può essere presente un convertitore MIDI-DSI ad LVDS in modo da poter pilotare direttamente un LCD lvds ad una risoluzione massimo 1920x1080.
+
+Vedete qui una tabella riassuntiva con tutte le periferiche esportate sul connettore,
+
+Il connettore del SOM è di tipo  SODIMM a 200 e il pin out del modulo è definito secondo lo standard edimm 2.0
+
+
+###
+
+EDIMM è uno standard engicam. La maggior parte dei nostri moduli supporta questo dipo di standard offrendo di fatto una grande flessibilità nella scelta del SOM 
+da utilizzare nella proprio progetto.
+
+L'esempio più classico è quello della gamma di prodotti con caratteristiche differenti che possono essere sviluppati partendo dalla stessa carrier board e 
+variando solamente il modulo in essa alloggiato.
+
+L'idea che sta dietro la BSP engicam è rendere facilmente trasportabile anche il software , da modulo a modulo.
+
+Nel corso degli anni questo tipo di standard è stato utilizzato in molte applicazioni che presentano elevati stress termici e meccanici senza nessun tipo di problemi.
+
+
+###
+
+La carrier board selezionata è  l' EDIMM 2.0 starterkit.
+
+Con questa board è possibile accedere alla maggior parte delle perifichere dello standard EDIMM.
+
+é una board molto compatta , dotata di un LCD 7 pollici con touch capacitivo da la possibilità alla maggior parte delle perifichere dello standard EDIMM.
+
+
+###
+
+lettura connessioni
+
+
+####
+
+
+Engicam BSP viene data sottoforma di macchina virtuale.
+
+Tutti i sorgenti e i tool di yocto gia installati.
+
+Tutte le toolchain per la crosscompilazione gia installate .
+
+Qt creator gia installato per e confighurato per il debug delle applicazioni direttamente sul target.
+
+#### 
+
+L'immagine della macchina virtuale è fornita in formato vmware.
+Nessun problema ad utilizzare in alternativa Virtualbox a patto di fare alcuni settaggi aggiunti, trovate tutta la procedura sul nostro manuale software.
+
+####
+
+Per la creazioni di una ditribuzione linux per la board selezionata viene utilizzato il sistema Yocto.
+
+Yocto è un progetto open source della Linux Foundation il cui obiettivo è produrre strumenti e processi 
+che consentano la creazione di distribuzioni Linux per software embedded indipendenti dall'architettura sottostante dell'hardware incorporato.
+
+####
+
+Per fare una breve introduzione di yocto partiamo dell'elemanto base, le ricette:
+
+Ricetta: una serie di istruzioni per la creazione di pacchetti. 
+Una ricetta descrive dove ottenere il codice sorgente e quali patch applicare. 
+Le ricette contengono l'unità logica di esecuzione, il software da costruire, le immagini da costruire e utilizzano l'estensione del file .bb.
+
+####
+
+<esempio di ricetta>
+
+####
+
+Le modalità di compilazione di una ricetta vengono definite da dei file di configuirazione:
+
+Un file di configurazione contiene variabili definite dall'utente che influiscono su ogni build.
+
+I file di configurazione più importanti sono quelli che descrivono l'architettura della macchina destinazione dei pacchetti compilati,
+al suo interno sono contenute tutte le variabili per hardware specifico
+
+
+####
+
+Tutte le ricette ed i file di configurazioni sono contenuti in directory di struttura predefinita chiamate layer.
+
+Engicam include tra il proprio layer tra quelli forniti dal NXP.
+
+Nel proprio layer ci sono tutte le ricette e le configurazioni per la creazione di distribuizioni linux per i SOM engicam.
+
+####
+
+<meta engicam>
+
+
+####
+
+Tutti i sorgenti del meta-engicam assieme ai kernel u-boot etc sono presenti nella nostra pagina di github.
+
+####
+
+Per chi volesse fare a meno della macchina virtuale e utilizzare un sistema linux nativo può scaricarsi la distribuzione yocto di NXP 
+e clonare il repository del maeta-engicam selezionando il branch della distro yocto utilizzata.
+
+####
+
+support page
+
+####
+
+Qt è un framework per la creazioni di interfaccie grafiche e non solo.
+
+è multipiattaforma quindi Nessuna modifica di codice nel passaggio di piattaforme.
+
+Un applicativo QT viene compilato nativamente per la piattaforma target con tutte le ottimizzazioni del caso per sfuttare al meglio l'HW.
+
+####
+
+
+Avviamo adesso la macchina virtuale.

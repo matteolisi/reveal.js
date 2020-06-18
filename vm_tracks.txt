@@ -28,12 +28,26 @@ ls recipes-images/images
 ### immagine di per eseguire test su schede
 engicam-test-hw.bb
 
+
+
 ### immagine di svilippo applicazioi qt (sono presenti i moduli più diffusi) impiegata spesso con i moduli openframe.
 engicam-demo-qt.bb
+
+MACHINE=icoremx8mmini . se
+
 
 bitbake engicam-demo-qt
 
 ### attendere la fine del building e far vedere come si flasha l'immagine con dd
 
+sudo date -s "5:37:30"
 
 
+ls
+cd yocto
+cd sumo
+ls
+
+MACHINE=icoremx8mm . fsl-setup-release.sh  -b build
+bitbake-layers add-layer ../sources/meta-engicam-mx8
+bitbake engicam-demo-qt

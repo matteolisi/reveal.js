@@ -123,35 +123,6 @@
 						</small>
 					</section>
 
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">          
-						<h4>Bitbake Recipes</h4>
-							<small><pre><code>
-SUMMARY = "Tools for emmc programmig"
-DESCRIPTION = "This package provides tools for emmc programmig"
-LICENSE = "GPLv2"
-LIC_FILES_CHKSUM = "file://${WORKDIR}/copyright;md5=3dd6192d306f582dee7687da3d8748ab"
-
-inherit allarch
-
-SRC_URI = "file://emmc_tools.sh"
-						
-RDEPENDS_${PN} += "bash dosfstools e2fsprogs pv"
-
-do_install () {
-		install -d ${D}${bindir}
-		install -m 0755 ${WORKDIR}/emmc_tools.sh ${D}${bindir}/emmc_tools.sh                           
-		ln -sf emmc_tools.sh ${D}${bindir}/emmc_fs.sh
-		ln -sf emmc_tools.sh ${D}${bindir}/emmc_fs_ker_dtb.sh
-		ln -sf emmc_tools.sh ${D}${bindir}/emmc_fs_ker.sh
-		ln -sf emmc_tools.sh ${D}${bindir}/emmc_ker.sh
-		ln -sf emmc_tools.sh ${D}${bindir}/emmc_ker_dtb.sh
-		ln -sf emmc_tools.sh ${D}${bindir}/emmc_dtb.sh
-		ln -sf emmc_tools.sh ${D}${bindir}/emmc_boot.sh
-		ln -sf emmc_tools.sh ${D}${bindir}/emmc_sdcard.sh
-}                                                      
-							</pre></code></small>
-						</section>					
-
 					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">
 						<img src="images/yocto_project_standard.png">
 						<small>
@@ -213,7 +184,7 @@ do_install () {
 │   │   ├── brcm-patchram-plus
 │   │   │   └── brcm_patchram_plus.c
 │   │   └── brcm-patchram-plus.bb
-│   └── lwb-bcm4343w-fw
+│   └── lwb-bcm4343w-fwScreencast 2020-06-17 11:48:45
 │       ├── lwb-bcm4343w-fw
 │       │   └── brcm4343w
 │       │       ├── 4343w-07_25_2016.hcd
@@ -284,26 +255,33 @@ do_install () {
 					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">		
 						<h4>Engicam Repos</h4>
 						All Engicam  BSP sources are open and available on github.<br><br>
-						https://github.com/engicam-stable
-					</section>
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">		
-						If you want to use your own linux machine you can install yocto sources and the corrisponding meta-layer branch. <br>
-						<img src="images/branch.png">
+						https://github.com/enScreencast 2020-06-17 11:48:45ch.png">
 					</section>
 
 					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">		
 						But if you are in trouble remeber:<br><br><br>
 						<strong>support@engicam.com</strong>
 					</section>
-				</section>
 
-				<section>
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">	
+						<img src="images/qtlogo.png"><br>
+						<small>		
+							</p>Qt is a <b>framework</b> for creating graphical user interfaces and applications.</p>
+							</p><b>Cross-platform</b> framework:</p>
+							<ul>
+								<li>Apps runs on different software and hardware platforms (Linux, Windows, macOS, Android or embedded systems)</li>
+								<li>No change in the underlying codebase while still being a native application with native capabilities and speed.</li>
+							</ul>
+						</small>
+					</section>
+
+				</section>
+				
+				<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">
 						<strong> 
 							Let's play with BSP 				
 						</strong>							
-					</section>
+				</section>
 			</section>
 
 			</div>
