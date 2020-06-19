@@ -25,9 +25,7 @@
 								<small>
 								<p style="color: rgba(0, 0, 0, .9);">								
 									Speaker: <br><br>
-									<strong>Matteo Lisi</strong> <br><br>
-									Engicam software team member<br><br>
-									<a href="matteo.lisi@engicam.com">matteo.lisi@engicam.com</a>
+									<strong>Francesco Utel</strong> <br><br>
 								</small>
 								</p>
 						</section>
@@ -35,42 +33,7 @@
 				
 
 				<!-- sezione presentazione Board -->
-				<section>
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">
-						<h2>The Hardware </h2>					
-					</section>
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">
-							<h4>i.Core MX8M Mini</h4>	
-								<img src="images/iCoreMX8M_Mini_full.png">
-							</h4>
-					</section>
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">
-							<img src="images/edimm.png" style=" text-align: center;"> <br>
-							<small  style=" text-align: left;">
-								Most Engicam modules are available in SODIMM format and are compatible with each other in order to have a complete scalability. 
-								<br><br>
-								This feature makes Engicam's  modules extremely flexible and allows the customer to develop different products, with different performance
-								and cost-optimized, using the same carrier board.
-								<br><br>
-								Thanks to NXP longevity program, Engicam modules have a guaranteed long term production availability.
-								<br><br>
-								Engicam SOM are proven in hundreds of different applications under extremely hard thermal and mechanical operating conditions.
-							</small>
-						</h4>
-					</section>
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">	
-						<h4>EDIMM Starterkit 2.0</h4>	
-							<img src="images/starterkit2.0.png" width="70%" height="70%">
-						</h4>
-					</section>
-
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">	
-							<img src="images/wiring_EDIMM2.0.png"  width="70%" height="70%">
-					</section>
-				</section>
+				
 
 
 				<!-- sezione presentazione bsp -->
@@ -255,7 +218,7 @@
 					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">		
 						<h4>Engicam Repos</h4>
 						All Engicam  BSP sources are open and available on github.<br><br>
-						https://github.com/enScreencast 2020-06-17 11:48:45ch.png">
+						https://github.com/engicam-stable
 					</section>
 
 					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">		
@@ -277,23 +240,112 @@
 
 				</section>
 				
-				<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">
-						<strong> 
-							Let's play with BSP 				
-						</strong>							
-				</section>
-			</section>
+			<!-- sezione gstreamer -->
 
+			<!-- sezione AI ultragea -->
+
+				<section>
+					<section data-background-image="images/fondo_diapo_engicam_logo.jpg" data-background-size="cover">
+						<h3>
+							Face detection DEMO
+						</h3>
+					</section>
+
+					<section data-background-image="images/fondo_diapo_engicam_logo.jpg" data-background-size="cover">
+						<h4>
+							Project
+						</h4>
+						<img data-src="images/engicam.png" width="50%" height="50%"  style="border:3px solid #333">
+						<p>
+							AVEM, Advanced vision embedded module, is developed through design and production of an embedded module based on newest ARM processor,
+							suited for Machine Vision applications in automotive/transportation, biomedical, security and robotics areas
+						</p>
+					</section>
+					<section data-background-image="images/fondo_diapo_engicam_logo.jpg" data-background-size="cover">
+						<h4>
+							Technological choice
+						</h4>
+						<img data-src="images/ultragea_mx8qm.png" width="40%" height="40%">
+						<p>
+							NXP i.MX8 QuadMax is the CPU chosen, the best for this type of application over performance, power consumption and software support.
+							What about the form factor, to optimize peripherals usage, a new pinout called UltraGEA has been developed, based on MXM connector
+						</p>
+					</section>
+
+					<section data-background-image="images/fondo_diapo_engicam_logo.jpg" data-background-size="cover">
+						<h4>
+							Environment
+						</h4>
+						<img data-src="images/eiq-environment.jpg" width="40%" height="40%">
+						<p>
+							eIQ software includes engines, neural network compilers and optimized libraries.
+						</p>
+					</section>
+					<section data-background-image="images/fondo_diapo_engicam.jpg" data-background-size="cover">
+						<h4>
+							Frameworks
+						</h4>
+						<img data-src="images/eiq-frameworks.jpg" width="40%" height="40%"  style="border:3px solid #333">
+						<p>
+							<ul>
+								<li>OpenCV, used to make face detection through pre-trained classifier Haar Cascade</li>
+								<li>TensorFlowLite, used to make face recognition through pre-trained model MobileFaceNets</li>
+								<li>ARMNN through Android NN API, used to enable gpu acceleration</li>
+							</ul>
+						</p>
+					</section>
+					<section data-background-image="images/fondo_diapo_engicam_logo.jpg" data-background-size="cover">
+						<h4>
+							TensorFlowLite
+						</h4>
+						<img data-src="images/tensorflowlite2.png" width="50%" height="50%"  style="border:3px solid #333">
+						<p>
+							A light-weight version of and a next step from TensorFlow. TensorFlow Lite is an open-source software library focused on running machine
+							learning models on mobile and embedded devices
+						</p>
+					</section>
+					<section data-background-image="images/fondo_diapo_engicam_logo.jpg" data-background-size="cover">
+						<h4>
+							OpenCV
+						</h4>
+						<img data-src="images/opencv.png" width="20%" height="20%"  style="border:3px solid #333">
+						<p>
+							A library comprised of programming functions that can perform image processing, video encoding/decoding, video analysis and	object detection
+						</p>
+					</section>
+					<section data-background-image="images/fondo_diapo_engicam_logo.jpg" data-background-size="cover">
+						<h4>
+							MobileFaceNet
+						</h4>
+						<img data-src="images/mobilefacenet.png" width="40%" height="40%"  style="border:3px solid #333">
+						<p>
+							Efficient Convolutional Neural Network models for accurate real-time face verification on mobile and embedded devices
+						</p>
+					</section>
+					<section data-background-image="images/fondo_diapo_engicam.jpg" data-background-size="cover">
+						<h4>
+							Haar Cascade
+						</h4>
+						<img data-src="images/cascade-haar.jpeg" width="20%" height="20%"  style="border:3px solid #333">
+						<p>
+							Object Detection using Haar feature-based cascade classifiers is an effective object detection method proposed by Paul Viola and Michael Jones in 2001.
+							It is a machine learning based approach where a cascade function is trained from a lot of positive and negative images.
+							It is then used to detect objects in other images
+						</p>
+					</section>
+				</section>
+			<!-- sezione webkit -->
+
+			<!-- Android -->
+
+			</section>
 			</div>
 		</div>
 
 		<aside id="presentable-icon" class="revealjs">
-
 			<a title="Table of Contents" href="#/0/1">
 				<i class="fa fa-list-ul fa-2x" style='color:  rgba(0,129,195,.6)'></i>
-			</a>    git push --set-upstream origin portwell
-
-		
+			</a>		
    		</aside>
 
 		<script src="dist/reveal.js"></script>
