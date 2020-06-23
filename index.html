@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Engicam</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -18,28 +18,39 @@
 			<div class="slides">
 				<!-- Init -->
 				<section>
-						<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">
-								<h2><strong> 
-								Introduction to Engicam BSP <br>
+						<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+								<h2><strong>Use cases of <br>
+									<img src="images/engicam.png"><br>
+									BSP<br>
 								</strong></h2>								
 								<small>
-								<p style="color: rgba(0, 0, 0, .9);">								
+								<p style="color: rgba(0, 0, 0, .9);">
 									Speaker: <br><br>
-									<strong>Francesco Utel</strong> <br><br>
+									<strong>Francesco Utel</strong><br><br>
 								</small>
 								</p>
 						</section>
+
+						<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">
+							<h2><strong>Agenda<br></strong></h2>
+							<ul>
+								<li>Introduction to Engicam BSP</li>
+								<li>Multimedia Network Streaming Application</li>
+								<li>Face Detection Demo</li>
+								<li>HTML5 demo</li>
+								<li>Android BSP</li>
+							</ul>
+							</p>
+					</section>
 				</section>
-				
 
 				<!-- sezione presentazione Board -->
 				
-
-
 				<!-- sezione presentazione bsp -->
 				<section>
-					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">
-						<h2>Engicam BSP</h2>	
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<h2><strong>Engicam BSP</strong></h2>
+						<img src="images/tux.png" width="50%" height="50%"><br>	
 					</section>
 
 					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">	
@@ -419,7 +430,7 @@ rtph264depay ! h264parse ! imxvpudec ! imxg2dvideosink sync=false
 						<h3>
 							<img data-src="images/face_recognition.png" width="50%" height="50%"  style="border:3px solid #333">
 							<br>
-							AVEM-Face detection demo
+							<strong>Face detection demo</strong>
 						</h3>
 					</section>
 
@@ -428,8 +439,10 @@ rtph264depay ! h264parse ! imxvpudec ! imxg2dvideosink sync=false
 							AVEM
 						</h4>
      					<p>
+						<small>
 							Advanced vision embedded module, is developed through design and production of an embedded module based on newest ARM processor,
 							suited for Machine Vision applications in automotive/transportation, biomedical, security and robotics areas
+						</small>
 						</p>
 					</section>
 					<section data-background-image="images/fondo_diapo_engicam_logo.jpg" data-background-size="cover">
@@ -438,8 +451,10 @@ rtph264depay ! h264parse ! imxvpudec ! imxg2dvideosink sync=false
 						</h4>
 						<img data-src="images/ultragea_mx8qm.png" width="40%" height="40%">
 						<p>
+							<small>
 							NXP i.MX8 QuadMax is the CPU chosen, the best for this type of application over performance, power consumption and software support.
 							What about the form factor, to optimize peripherals usage, a new pinout called UltraGEA has been developed, based on MXM connector
+							</small>
 						</p>
 					</section>
 
@@ -458,11 +473,13 @@ rtph264depay ! h264parse ! imxvpudec ! imxg2dvideosink sync=false
 						</h4>
 						<img data-src="images/eiq-frameworks.jpg" width="40%" height="40%"  style="border:3px solid #333">
 						<p>
+							<small>
 							<ul>
 								<li>OpenCV, used to make face detection through pre-trained classifier Haar Cascade</li>
 								<li>TensorFlowLite, used to make face recognition through pre-trained model MobileFaceNets</li>
 								<li>ARMNN through Android NN API, used to enable gpu acceleration</li>
 							</ul>
+							</small>
 						</p>
 					</section>
 					<section data-background-image="images/fondo_diapo_engicam_logo.jpg" data-background-size="cover">
@@ -499,9 +516,11 @@ rtph264depay ! h264parse ! imxvpudec ! imxg2dvideosink sync=false
 						</h4>
 						<img data-src="images/cascade-haar.jpeg" width="20%" height="20%"  style="border:3px solid #333">
 						<p>
+							<small>
 							Object Detection using Haar feature-based cascade classifiers is an effective object detection method proposed by Paul Viola and Michael Jones in 2001.
 							It is a machine learning based approach where a cascade function is trained from a lot of positive and negative images.
 							It is then used to detect objects in other images
+							</small>
 						</p>
 					</section>
 				</section>
@@ -553,10 +572,159 @@ BBLAYERS += "${BSPDIR}/sources/meta-wpe"
 					</code></pre></small><br><br>
 				</section>				
 
+				<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+					<h4> i.CoremMx8m Mini</h4>
+						<img src="images/iCoreMX8M_Mini_full.png">
+					</h4>
+				</section>
+
+				<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<img src="images/edimm.png" style=" text-align: center;"> <br>
+						<small  style=" text-align: left;">
+							Most Engicam modules are available in SODIMM format and are compatible with each other in order to have a complete scalability.
+							<br><br>
+							This feature makes Engicam's  modules extremely flexible and allows the customer to develop different products, with different performance
+							and cost-optimized, using the same carrier board.
+							<br><br>
+							Thanks to NXP longevity program, Engicam modules have a guaranteed long term production availability.
+							<br><br>
+							Engicam SOM are proven in hundreds of different applications under extremely hard thermal and mechanical operating conditions.
+						</small>
+					</h4>
+				</section>
+
+				<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+					<h4>CTouch 2.0</h4>
+						<img src="images/ctouch2.png">
+					</h4>
+				</section>
+
+				<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<img src="images/CTouch2.0_Peripherals_wiring_map.png">
+				</section>
 			</section>				
 
 			<!-- Android -->
+			<section>
+				<section  data-background="images/fondo_diapo_engicam.jpg">
+					<img src="images/ANDROID.png" width="50%" height="50%">
+					<h3><strong>Android BSP</strong></h3>
+				</section>
 
+				<section data-background="images/fondo_diapo_engicam.jpg" >
+					<h3>Software Android </h3>
+					<small>
+					<p>Android is an operating system for mobile devices developed by Google LLC and based 
+						on the Linux kernel, designed primarily for embedded systems</p>
+					</small>
+					<img src="images/android_framework_details.png" width="80%" height="80%">
+				</section>
+
+				<section data-auto-animate  data-background="images/fondo_diapo_engicam.jpg">
+					<h3>Android Engicam BSP </h3>
+
+					<img src="images/engicam_bsp.png" width="70%" height="70%">
+
+					<h5>download Android release package</h5>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1">
+						imx-engicam-p9.0.0_2.3.0.tgz
+					</code></pre>
+
+					<h5>reccomended system requirements</h5>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1-4">
+						Processor: 4
+						Memory: 12GB
+						OS: Ubuntu 18.04.3 LTS
+						Java Version: Openjdk-8-jdk
+					</code></pre>
+				</section>
+
+				<section data-auto-animate  data-background="images/fondo_diapo_engicam.jpg">
+					<h3>Building Android </h3>
+
+					<h5>download Android</h5>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1-9">
+						cd ~ (or any other directory you like)
+						tar xvf imx-engicam-p9.0.0_2.3.0.tgz
+						mkdir ~/bin
+						curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+						chmod a+x ~/bin/repo
+						export PATH=${PATH}:~/bin
+						source ~/imx-engicam-p9.0.0_2.3.0/imx_engicam_android_setup.sh
+						# By default, the imx_engicam_android_setup.sh script will create the source code build environemnt in the folder ~/android_build
+						# ${MY_ANDROID} will be refered as the i.MX Android source code root directory in all i.MX Andorid release documentation.
+					</code></pre>
+
+					<h5>Building Android</h5>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1-5">
+						export MY_ANDROID=~/android_build
+						cd ${MY_ANDROID}
+						source build/envsetup.sh
+						lunch ofcap_8mm-userdebug
+						make -j4 2>&1 | tee build-log.txt
+					</code></pre>
+				</section>
+
+				<section data-auto-animate  data-background="images/fondo_diapo_engicam.jpg">
+					<h3>Flashing Android </h3>
+
+					<h6>target </h6>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1">
+						fatsboot bootloader
+					</code></pre>
+
+					<h6>host </h6>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1-2">
+						cd ${MY_ANDROID}/out/target/product/ofcap_8mm
+						sudo ./fastboot_imx_flashall.sh -f imx8mm -d ofcap -e -c 7 -D .
+					</code></pre>
+				</section>
+
+				<section data-auto-animate  data-background="images/fondo_diapo_engicam.jpg">
+					<h3>Release Notes </h3>
+
+					<ul>
+						<li>Android 9.0, U-Boot 2018.03, Linux Kernel 4.14.98 </li>
+						<li>Based on NXP release: p9.0.0_2.3.0</li>
+						<li>Userdebug build with permissive SELinux, OEM unlocking (u-boot) and disabled DM-Verity (filesystem)</li>
+						<li>A/B (Seamless) System Updates</li>
+					<ul>
+				</section>
+
+				<section data-auto-animate  data-background="images/fondo_diapo_engicam.jpg">
+					<h3>Android Studio </h3>
+					<img src="images/android-studio-png.png">
+					<p>Android Studio is Android's official IDE. It is purpose-built for Android to accelerate your development and help you build the highest-quality apps for every Android device.</p>
+				</section>
+
+
+				<section  data-background="images/fondo_diapo_engicam.jpg">
+					<h3>i.Core MX8M MINI</h3>
+					<div >
+						<table style="width:100%;height: 100%">
+						  <tr>
+							<td style="width: 50%"><img src="images/i.CoreMX8MMini.jpg"></td>
+							<td style="width: 50%"><img src="images/imx8mmini_caratteristiche.png"></td>
+						  </tr>
+						</table>
+					  </div>
+				</section>
+
+				<section  data-background="images/fondo_diapo_engicam.jpg" >
+					<h3>C.TOUCH 2.0 carrier board </h3>
+					<div >
+						<table style="width:100%;height: 100%">
+						  <tr>
+							<td style="width: 50%"><img src="images/cTouchCarrier_2.0.png"></td>
+							<td style="width: 50%"><img src="images/cTouchCarrierConnection.png"></td>
+						  </tr>
+						</table>
+					  </div>							
+				</section>
+
+				<section data-auto-animate  data-background="images/fondo_diapo_engicam.jpg">
+					<h3>Let's play with Android Studio </h3>
+				</section>
 			</section>
 			</div>
 		</div>
