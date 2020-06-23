@@ -86,6 +86,75 @@
 						</small>
 					</section>
 
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<img src="images/yocto_project_standard.png">
+						<small>
+							<ul>
+							<li>Interoperable tools, 
+							metadata, and processes that enable the rapid, <b>repeatable development</b> of Linux-based embedded systems in which every aspect of the development process can be customized.
+							<li>The project offers different sized targets <b>from "tiny" to fully featured</b> images which are configurable and customisable by the end user.
+							</ul>						
+						</small>
+					</section>
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
+							<img src="images/Yocto-Diagram.png">
+					</section>
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
+						<h4>Bitbake</h4>
+						<small>
+							<p>It is a <b>Make-like</b> build tool for packages <b>cross compilation</b>.</p>
+							<p>Cross-compilation: compiling code for one computer system (often known as the target) on a different system, called the host.</p>
+						</small>
+					</section>
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
+						<h4>Bitbake Recipes</h4>
+						<small>
+							<p>BitBake recipes specify <b>how a particular package is built.</b></p>
+							<p>Recipes consist of the source URL (http, https, ftp, cvs, svn, git, local file system) of the package, dependencies and compile or install options.</p>
+							<p>As a first step in a cross-build setup, the framework will attempt to create a <b>cross-compiler toolchain</b> suited for the target platform.</p>
+							<p>During the build process, recipes are used to track dependencies, performing native or cross-compilation of the package and package the output to make it suitable for installation on the local or a target device. It is also possible to create complete images consisting 
+							of a root file system and kernel.</p>
+						</small>
+					</section>
+
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
+						<h4>Bitbake Recipes</h4>
+						<small><pre><code>
+SUMMARY = "Tools for emmc programmig"
+DESCRIPTION = "This package provides tools for emmc programmig"
+LICENSE = "GPLv2"
+LIC_FILES_CHKSUM = "file://${WORKDIR}/copyright;md5=3dd6192d306f582dee7687da3d8748ab"
+
+inherit allarch
+
+SRC_URI = "file://emmc_tools.sh"
+			
+RDEPENDS_${PN} += "bash dosfstools e2fsprogs pv"
+
+do_install () {
+	install -d ${D}${bindir}
+	install -m 0755 ${WORKDIR}/emmc_tools.sh ${D}${bindir}/emmc_tools.sh
+	ln -sf emmc_tools.sh ${D}${bindir}/emmc_fs.sh
+	ln -sf emmc_tools.sh ${D}${bindir}/emmc_fs_ker_dtb.sh
+	ln -sf emmc_tools.sh ${D}${bindir}/emmc_fs_ker.sh
+	ln -sf emmc_tools.sh ${D}${bindir}/emmc_ker.sh
+	ln -sf emmc_tools.sh ${D}${bindir}/emmc_ker_dtb.sh
+	ln -sf emmc_tools.sh ${D}${bindir}/emmc_dtb.sh
+	ln -sf emmc_tools.sh ${D}${bindir}/emmc_boot.sh
+	ln -sf emmc_tools.sh ${D}${bindir}/emmc_sdcard.sh
+}							
+						</pre></code></small>
+					</section>
+
+					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">		
+						<img src="images/bitbake-steps.jpg">
+					</section>
+
 					<section data-background-transition="slide" data-background="images/fondo_diapo_engicam_logo.jpg" id="presentable" class="bookend">
 						<img src="images/yocto_project_standard.png">
 						<small>
@@ -245,8 +314,9 @@
 			<section>
 
 				<section data-background-image="images/fondo_diapo_engicam_logo.jpg" data-background-size="cover">
-					<h3>
-						Multimedia Demo
+					<img src="images/multimedia.png"><br>	
+					<h4>
+						Network Streaming Demo
 					</h3>
 				</section>
 
@@ -270,9 +340,28 @@ route add -net 224.0.0.0 netmask 240.0.0.0 dev eth0
 ​
 gst-launch-1.0 v4l2src device=/dev/video7 ! \
 video/x-raw, framerate=30/1 ! videoconvert ! v4l2h264enc output-io-mode=4 ! \                      
-rtph264pay ! udpsink host=$MULTICAST_IP3 port=$MULTICAST_PORT3 
+rtph264pay ! udpsink host=$MULTICAST_IP3 port=$MULTICAST_PORT3
 
 				</code></pre></small>
+				</section>
+
+				<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+					<h4>SmarCore MX8X</h4>
+						<img src="images/smarcmx8x_full.png">
+				</section>
+
+				<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+						<img src="images/SMARCSTARTERKIT.png">
+				</section>
+
+				<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
+					<h4>Connections on Multimedia 4K Board</h4>
+					<p style="color: rgba(0, 0, 0, .9) ; text-align: left;">For this demos we have used: </p>
+					<ul>
+						<li>MIPI Camera as primary video input - Usb camera as secondary video input.</li>
+						<li>SDCARD for local video storage.</li>
+						<li>Network interface for streaming.</li>
+					</ul>
 				</section>
 
 				<section data-background-transition="slide" data-background="images/fondo_diapo_engicam.jpg" id="presentable" class="bookend">
@@ -328,17 +417,18 @@ rtph264depay ! h264parse ! imxvpudec ! imxg2dvideosink sync=false
 				<section>
 					<section data-background-image="images/fondo_diapo_engicam_logo.jpg" data-background-size="cover">
 						<h3>
-							Face detection DEMO
+							<img data-src="images/face_recognition.png" width="50%" height="50%"  style="border:3px solid #333">
+							<br>
+							AVEM-Face detection demo
 						</h3>
 					</section>
 
 					<section data-background-image="images/fondo_diapo_engicam_logo.jpg" data-background-size="cover">
 						<h4>
-							Project
+							AVEM
 						</h4>
-						<img data-src="images/engicam.png" width="50%" height="50%"  style="border:3px solid #333">
-						<p>
-							AVEM, Advanced vision embedded module, is developed through design and production of an embedded module based on newest ARM processor,
+     					<p>
+							Advanced vision embedded module, is developed through design and production of an embedded module based on newest ARM processor,
 							suited for Machine Vision applications in automotive/transportation, biomedical, security and robotics areas
 						</p>
 					</section>
